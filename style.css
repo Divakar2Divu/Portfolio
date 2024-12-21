@@ -18,29 +18,61 @@ header {
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
-.nav-links li {
-    margin: 0 15px;
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+/* Responsive styles */
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 25px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+  }
 }
 
 
