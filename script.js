@@ -6,3 +6,8 @@ document.querySelectorAll("a").forEach(link => {
         });
     });
 });
+
+function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("show");
+}
